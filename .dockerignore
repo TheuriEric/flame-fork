@@ -7,9 +7,10 @@
 **/.DS_Store
 **/__pycache__
 **/.venv
+**/.flame_fork
 **/.classpath
 **/.dockerignore
-**/.env
+#**/.env
 **/.git
 **/.gitignore
 **/.project

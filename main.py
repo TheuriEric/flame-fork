@@ -44,7 +44,7 @@ def load_system_prompt():
 
 
 class Gemini(AIPlatform):
-    def __init__(self, api_key: str, system_prompt: str = "You are a helpful assistant for a restaurant."):
+    def __init__(self,api_key,system_prompt: str = "You are a helpful assistant for a restaurant."):
         self.api_key = api_key
         self.system_prompt = system_prompt
         genai.configure(api_key=self.api_key)
@@ -69,7 +69,7 @@ class ChatResponse(BaseModel):
 api_key = os.getenv("API_KEY")
 system_prompt = load_system_prompt()
 
-ai_platform = Gemini(api_key, system_prompt)
+ai_platform = Gemini(api_key=api_key, system_prompt=system_prompt)
 
 
 @app.get("/")
